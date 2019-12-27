@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.MainController">
+  <children>
+    <ChoiceBox fx:id="homeFavOrDog" layoutX="247.0" layoutY="119.0" prefWidth="129.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Home favorite" />
+          <String fx:value="Home Underdog" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <TextField fx:id="homeTeam" layoutX="73.0" layoutY="24.0" prefWidth="200.0" />
+    <TextField fx:id="awayTeam" layoutX="346.0" layoutY="24.0" prefWidth="200.0" />
+    <ChoiceBox fx:id="homeRest" layoutX="109.0" layoutY="158.0" prefWidth="129.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="No rest" />
+          <String fx:value="1 Day" />
+          <String fx:value="2-3 Days" />
+          <String fx:value="4+ Days" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="awayRest" layoutX="382.0" layoutY="158.0" prefWidth="129.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="No rest" />
+          <String fx:value="1 Day" />
+          <String fx:value="2-3 Days" />
+          <String fx:value="4+ Days" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="homeRestStatus" layoutX="247.0" layoutY="194.0" prefWidth="129.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Equal" />
+          <String fx:value="Advantage" />
+          <String fx:value="Disadvantage" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="isConference" layoutX="247.0" layoutY="237.0" prefWidth="129.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Conference" />
+          <String fx:value="Non-conference" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="isDivision" layoutX="247.0" layoutY="280.0" prefWidth="129.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Division" />
+          <String fx:value="Non-division" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="homeLastMatch" layoutX="109.0" layoutY="315.0" prefWidth="129.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Win" />
+          <String fx:value="Lose" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="awayLastMatch" layoutX="382.0" layoutY="315.0" prefWidth="129.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Win" />
+          <String fx:value="Lose" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Button fx:id="submitButton" layoutX="279.0" layoutY="356.0" mnemonicParsing="false" onAction="#onSubmitAction" prefWidth="64.1875" text="Submit" />
+    <Text fx:id="homeTeamPercentage" layoutX="141.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="">
+      <fill>
+        <Color blue="0.000" green="0.600" red="0.192" fx:id="x2" />
+      </fill>
+      <font>
+        <Font size="32.0" fx:id="x1" />
+      </font>
+    </Text>
+    <Text fx:id="awayTeamPercentage" fill="$x2" font="$x1" layoutX="414.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+    <ProgressIndicator fx:id="progressCircle" layoutX="297.0" layoutY="393.0" progress="0.0" visible="false"/>
+  </children>
+</AnchorPane>
